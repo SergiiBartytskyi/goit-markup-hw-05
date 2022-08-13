@@ -87,9 +87,6 @@ img {
 
 .logo-h,
 .logo-f {
-	padding-top: 24px;
-	padding-bottom: 24px;
-
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 	font-size: 26px;
@@ -100,6 +97,8 @@ img {
 
 .logo-h {
 	margin-right: 93px;
+	padding-top: 24px;
+	padding-bottom: 25px;
 }
 
 .header-logo {
@@ -135,7 +134,7 @@ img {
 }
 
 .header-link {
-	display: flex;
+	display: block;
 	padding-top: 32px;
 	padding-right: 2px;
 	padding-left: 2px;
@@ -174,6 +173,7 @@ img {
 	font-size: 14px;
 	letter-spacing: 0.02em;
 	color: var(--secondary-text-color);
+	transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contacts-link:hover,
@@ -198,7 +198,6 @@ img {
 
 	text-align: center;
 	background-color: #c4c4c4;
-	/* background-color: var(--secondary-bg-color); */
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -234,16 +233,16 @@ img {
 	text-decoration: none;
 	color: var(--tertiary-text-color);
 	background-color: var(--primary-btn-color);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
 	cursor: pointer;
+
+	transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-	color: var(--tertiary-text-color);
 	background-color: #188ce8;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------- features ---------- */
@@ -375,22 +374,15 @@ img {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	color: var(--primary-icon-color);
-}
-
-.team-social-icon {
-	display: block;
-	fill: currentColor;
+	fill: var(--primary-icon-color);
+	transition: background-color var(--transition-duration) var(--transition-timing-function),
+		fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
 	background-color: var(--accent-color);
-}
-
-.team-social-link:hover .team-social-icon,
-.team-social-link:focus .team-social-icon {
-	fill: var(--tertiary-text-color);
+	fill: #ffffff;
 }
 
 /* ---------- Client ---------- */
@@ -420,22 +412,14 @@ img {
 	height: 100%;
 	border: 1px solid var(--primary-icon-color);
 	border-radius: 4px;
-	color: var(--primary-icon-color);
-}
-
-.clients-icon {
-	display: block;
-	fill: currentColor;
+	fill: var(--primary-icon-color);
+	transition: border-color var(--transition-duration) var(--transition-timing-function),
+		fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .clients-link:hover,
 .clients-link:focus {
 	border-color: var(--accent-color);
-	color: var(--accent-color);
-}
-
-.clients-icon:hover,
-.clients-icon:focus {
 	fill: var(--accent-color);
 }
 
@@ -455,13 +439,13 @@ img {
 .footer-contact {
 	margin-right: 70px;
 }
+.logo-f {
+	display: block;
+	margin-bottom: 20px;
+}
 
 .footer-logo {
 	color: var(--tertiary-text-color);
-}
-
-.footer-address {
-	margin-top: 20px;
 }
 
 .footer-item:not(:last-child) {
@@ -478,10 +462,12 @@ img {
 
 .footer-location {
 	color: var(--tertiary-text-color);
+	transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-link {
 	color: rgba(255, 255, 255, 0.6);
+	transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-location:hover,
@@ -517,18 +503,14 @@ img {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	color: var(--tertiary-text-color);
+	fill: var(--tertiary-text-color);
 	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-socials-link:hover,
 .footer-socials-link:focus {
 	background-color: var(--accent-color);
-}
-
-.footer-social-icon {
-	display: block;
-	fill: currentColor;
 }
 
 /* ---------- portfolio ---------- */
@@ -560,6 +542,9 @@ img {
 	text-align: center;
 	color: var(--primary-text-color);
 	background-color: var(--secondary-btn-color);
+	transition: color var(--transition-duration) var(--transition-timing-function),
+		background-color var(--transition-duration) var(--transition-timing-function),
+		box-shadow var(--transition-duration) var(--transition-timing-function);
 
 	cursor: pointer;
 }
@@ -592,6 +577,7 @@ img {
 
 .project-link {
 	display: block;
+	transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .project-link:hover,
