@@ -283,14 +283,16 @@ img {
 	background-color: var(--section-bg-color);
 }
 
-.feature-title {
-	margin-bottom: 10px;
-
+.feature-title,
+.label {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: var(--primary-text-color);
 }
 
+.feature-title {
+	margin-bottom: 10px;
+}
 .features-text {
 	font-size: 14px;
 	line-height: 1.71;
@@ -314,6 +316,35 @@ img {
 .abaut-list {
 	display: flex;
 	justify-content: space-between;
+}
+
+.abaut-item {
+	position: relative;
+}
+/* .label {
+	position: absolute;
+	bottom: 0;
+	padding-top: 27px;
+	padding-bottom: 27px;
+	left: 0;
+	width: 100%;
+
+	color: var(--tertiary-text-color);
+	text-align: center;
+	background-color: rgba(47, 48, 58, 0.8);
+} */
+
+.label {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+
+	color: var(--tertiary-text-color);
+	background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* ---------- team ---------- */
